@@ -1,0 +1,26 @@
+<div class="shopingContent">
+	<div class="top_ct">
+		<div class="left_img">
+			<a href="{{ data.shopingTop[0].href }}"><img src="{{ data.shopingTop[0].pic }}" alt="" /></a>
+		</div>
+		<div class="right_img">
+			<a href="{{ data.shopingTop[0].href }}"><img src="{{ data.shopingTop[1].pic }}" alt="" /></a>
+		</div>
+		<div class="right_img">
+			<a href="{{ data.shopingTop[0].href }}"><img src="{{ data.shopingTop[2].pic }}" alt="" /></a>
+		</div>
+	</div>
+	<div class="middleContent">
+		<ul>
+			<li ng-repeat="gl in data.goods">
+				<a href="{{ gl.href }}" class="f_img"><img src="{{ gl.img_url }}" alt="" /></a>
+				<p class="g_info"><a href="">{{ gl.goods_info | goods_info }}</a></p>
+				<p class="price">￥{{ gl.nowPrice }}<span>{{ gl.oldPrice | oldPrice }}</span></p>
+				<p class="g_type">
+					<span class="saleNum">月售  {{ gl.saleNum }}</span>
+					<span class="by" >{{ gl.freight | by }}</span>
+				</p>
+			</li>
+		</ul>
+	</div>
+</div>

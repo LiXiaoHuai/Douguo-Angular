@@ -1,0 +1,162 @@
+{
+	"shopingTop":[
+		{
+			"href":"http://www.douguo.com/mall/item/6947",
+			"pic":"http://i1.douguo.net/upload/banner/1454579537.jpg"
+		},
+		{
+			"href":"http://www.douguo.com/mall/item/8724",
+			"pic":"http://i1.douguo.net/upload/banner/1454579568.jpg"
+		},
+		{
+			"href":"http://www.douguo.com/mall/item/5048",
+			"pic":"http://i1.douguo.net/upload/banner/1454579586.jpg"
+		}
+	],
+	"goods":[
+		{
+			"href":"http://www.douguo.com/mall/item/8973",
+			"goods_info":"现货 九百亩阳澄大闸蟹鲜活螃蟹 全母2.6-2.3两8只",
+			"img_url":"http://i1.douguo.net/upload/tuan/4/1/4/448_41422f88ab161d9da085be01b0e8b824.jpg",
+			"nowPrice":"99.00",
+			"oldPrice":"198.00",
+			"saleNum":"1602 件",
+			"freight":""
+		},
+		{
+			"href":"http://www.douguo.com/mall/item/752",
+			"goods_info":"特级牛排套餐8份装 配进口黄油 酱包 刀叉2套 顺丰包邮",
+			"img_url":"http://i1.douguo.net/upload/tuan/8/d/a/448_8d02955e7e5c4d616fce3c533e6aaffa.jpg",
+			"nowPrice":"118.00",
+			"oldPrice":"138.00",
+			"saleNum":"5106 份",
+			"freight":""
+		},
+		{
+			"href":"http://www.douguo.com/mall/item/223",
+			"goods_info":"武汉热干面 4人份 手工精制  辣度可选",
+			"img_url":"http://i1.douguo.net/upload/tuan/b/f/4/448_bf9352216ef31292305dbf701a5dafa4.jpg",
+			"nowPrice":"39.90",
+			"oldPrice":"49.90",
+			"saleNum":"5795 件",
+			"freight":"20"
+		},
+		{
+			"href":"http://www.douguo.com/mall/item/19270",
+			"goods_info":"福亮源 正宗柳州螺蛳粉 3连包（柳州发货）",
+			"img_url":"http://i1.douguo.net/upload/tuan/7/6/b/448_7683471c6689c577d89ec6633e4caf5b.jpg",
+			"nowPrice":"28.80",
+			"oldPrice":"35.80",
+			"saleNum":"569 包",
+			"freight":""
+		},
+		{
+			"href":"http://www.douguo.com/mall/item/18716",
+			"goods_info":"【买二赠一】美孕良品 | 云南桃胶100g | 平民燕窝/润肤美妍",
+			"img_url":"http://i1.douguo.net/upload/tuan/b/b/c/448_bb622c605997a2c0ed57ddadccee613c.jpg",
+			"nowPrice":"16.90",
+			"oldPrice":"19.90",
+			"saleNum":"987 件",
+			"freight":"6"
+		},
+		{
+			"href":"http://www.douguo.com/mall/item/4915",
+			"goods_info":"安佳 黄油 动物性 原装454g 烘焙必备",
+			"img_url":"http://i1.douguo.net/upload/tuan/f/1/1/448_f140d7cb0eafeb5c1fffe82be58ca041.jpg",
+			"nowPrice":"34.80",
+			"oldPrice":"35.80",
+			"saleNum":"1548 个",
+			"freight":"20"
+		},
+		{
+			"href":"http://www.douguo.com/mall/item/21142",
+			"goods_info":"2016年新鲜山楂果5.2斤 大金星 鲜山楂 糖葫芦原料 红果包邮",
+			"img_url":"http://i1.douguo.net/upload/tuan/e/e/b/448_eeb4339ae062b9368d17fad876b60a1b.jpg",
+			"nowPrice":"29.90",
+			"oldPrice":"45.00",
+			"saleNum":"14 份",
+			"freight":"15"
+		},
+		{
+			"href":"http://www.douguo.com/mall/item/20951",
+			"goods_info":"利仁DHG-T2600F韩式多功能电火锅",
+			"img_url":"http://i1.douguo.net/upload/tuan/e/4/3/448_e4d04cf56e88491cf5a4bd6055c9fe03.jpg",
+			"nowPrice":"99.00",
+			"oldPrice":"179.00",
+			"saleNum":"232 台",
+			"freight":""
+		},
+		{
+			"href":"http://www.douguo.com/mall/item/20786",
+			"goods_info":"浪里鲜|野生带壳生蚝5斤装 现捕现发",
+			"img_url":"http://i1.douguo.net/upload/tuan/2/0/2/448_20ad6391f5e65edb4828b32217eae2e2.jpg",
+			"nowPrice":"79.90",
+			"oldPrice":"109.00",
+			"saleNum":"142 件",
+			"freight":""
+		},
+		{
+			"href":"http://www.douguo.com/mall/item/20733",
+			"goods_info":"靓禾良仓 2016新米 10月出厂日期 正宗东北大米五常长粒香5斤装 产地直供 包邮",
+			"img_url":"http://i1.douguo.net/upload/tuan/f/5/7/448_f58e54274e87428d050e6a909cba8267.jpg",
+			"nowPrice":"29.00",
+			"oldPrice":"49.00",
+			"saleNum":"1758 袋",
+			"freight":""
+		},
+		{
+			"href":"http://www.douguo.com/mall/item/20680",
+			"goods_info":"五丰 上等沙河粉4斤（无任何添加）",
+			"img_url":"http://i1.douguo.net/upload/tuan/c/8/9/448_c8e473ab1b2ef81477b89fcc16dc8ea9.jpg",
+			"nowPrice":"24.80",
+			"oldPrice":"26.80",
+			"saleNum":"89 袋",
+			"freight":""
+		},
+		{
+			"href":"http://www.douguo.com/mall/item/20407",
+			"goods_info":"小尾羊 羊蝎子3斤内蒙古新鲜羔羊肉生羊脊骨羊蝎子火锅",
+			"img_url":"http://i1.douguo.net/upload/tuan/b/1/9/448_b141f56ab8c6e2265154c84dab5e0829.jpg",
+			"nowPrice":"99.00",
+			"oldPrice":"138.00",
+			"saleNum":"172 份",
+			"freight":""
+		},
+		{
+			"href":"http://www.douguo.com/mall/item/20312",
+			"goods_info":"澳洲菲力牛排组合套餐10片装130g/片 澳洲原料进口",
+			"img_url":"http://i1.douguo.net/upload/tuan/a/9/1/448_a99df2b05a14477ed5b26f5bb0695ef1.jpg",
+			"nowPrice":"95.00",
+			"oldPrice":"109.00",
+			"saleNum":"153 130g/10片",
+			"freight":""
+		},
+		{
+			"href":"http://www.douguo.com/mall/item/19685",
+			"goods_info":"美国康宁 晶彩透明玻璃锅 明火直烧2.25L 一锅多用",
+			"img_url":"http://i1.douguo.net/upload/tuan/c/f/4/448_cf55be57418ddc17516512ac6c091334.jpg",
+			"nowPrice":"279.00",
+			"oldPrice":"658.00",
+			"saleNum":"58 口",
+			"freight":""
+		},
+		{
+			"href":"http://www.douguo.com/mall/item/18949",
+			"goods_info":"古蜀味道 四川红油辣子（辣椒油）250g",
+			"img_url":"http://i1.douguo.net/upload/tuan/9/6/a/448_96acc55f8b6f9c6797b53ef49cb2f94a.jpg",
+			"nowPrice":"15.60",
+			"oldPrice":"",
+			"saleNum":"671 瓶",
+			"freight":"8"
+		},
+		{
+			"href":"http://www.douguo.com/mall/item/18470",
+			"goods_info":"寿桃 车仔面/乌冬面带酱包 10人份（4种口味混搭）",
+			"img_url":"http://i1.douguo.net/upload/tuan/3/3/2/448_33aeecc1aec4e40beed9633bbd660332.jpg",
+			"nowPrice":"32.80",
+			"oldPrice":"36.00",
+			"saleNum":"311 包",
+			"freight":""
+		}
+	]
+}

@@ -1,0 +1,27 @@
+<div class="paihang">
+	<div class="phleft">
+		<ul>
+			<li class="phli" ng-repeat="phli in data.rankcp">
+				<h3>{{ phli.rank_name }}<a href="">更多&gt;&gt;</a></h3>
+				<div class="tleli">
+					<ul >
+						<li ng-repeat="tleli in phli.rankAry">
+							<span class="num">{{ tleli.linum }}</span>&nbsp;
+							<a href="">{{ tleli.prs }}</a>
+							<span>{{ tleli.favnum }}</span>
+						</li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<div class="phright">
+		<h3><a href="">全部榜单</a></h3>
+		<div class="bankli" ng-repeat="bank in data.hotcp">
+			<h4>{{ bank.rankType }}</h4>
+			<ul>
+				<li ng-repeat="bkli in bank.rankli"><a href="" >{{  bkli  }}</a></li>
+			</ul>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="shortcut icon" type="image/x-icon" href="http://www.douguo.com/favicon.ico" />
+	<title>胆·敢不同———美的原生态AH煲</title>
+	<link rel="stylesheet" href="../../css/meidi.css" />
+	<link rel="stylesheet" href="../../css/swiper/swiper.min.css" />
+</head>
+<body>
+	<div class="head">
+		<img src="../../img/meidi/index.jpg" alt="" />
+	</div>
+	<div class="middle">
+		<div class="cont">
+			<div class="alycont">
+				<p>申请人数 : <span>人</span></p>
+				<p>申请时间 : <span>2016年10月16日-2016年10月24日</span></p>
+				<p>结束时间 : <span>2016年11月14日</span></p>
+				<a href=""></a>
+			</div>
+			<div class="ind"><img src="../../img/meidi/index2.jpg" alt="" /></div>
+			<div class="ind"><img src="../../img/meidi/index3.jpg" alt="" /></div>
+			<div class="ind"><img src="../../img/meidi/index4.jpg" alt="" /></div>
+			<div class="ind"><img src="../../img/meidi/index5.jpg" alt="" /></div>
+			<div class="ind"><img src="../../img/meidi/index6.jpg" alt="" /></div>
+			<div class="ind"><img src="../../img/meidi/index7.jpg" alt="" /></div>
+			<div class="ind"><img src="../../img/meidi/index8.jpg" alt="" /></div>
+			<div class="ind"><img src="../../img/meidi/index9.jpg" alt="" /></div>
+			<div class="panl">
+				<div class="swiper-container">
+			        <div class="swiper-wrapper">
+			            <div class="swiper-slide"></div>
+			            <div class="swiper-slide"></div>
+			            <div class="swiper-slide"></div>
+			            <div class="swiper-slide"></div>
+			            <div class="swiper-slide"></div>
+        			</div>
+			        <!-- Add Pagination -->
+			        <div class="swiper-pagination"></div>
+    			</div>
+			</div>
+			<div class="ind"><img src="../../img/meidi/index10.jpg" alt="" /></div>
+			<div class="ind"><img src="../../img/meidi/index11.jpg" alt="" /></div>
+			<div class="ind"><img src="../../img/meidi/index12.jpg" alt="" /></div>
+		</div>
+	</div>
+	<footer>
+			<div class="about">
+				<a href="">关于豆果</a>
+				<a href="">· 在豆果工作 </a>
+				<a href="">· 意见反馈</a>
+				<a href="">· 友情链接</a>
+				<a href="">· 菜谱大全</a>
+				<a href="">· 品牌馆</a>
+				<a href="">· 商家入驻</a>
+			</div>
+			<p>©2009-2016 北京豆果信息技术有限公司 京ICP证111032号 京公网安备11010102001133号 京网文[2014]0774-174号 食品流通许可证SP1101061510252413</p>
+			<div class="ifm">
+				<span>
+					<iframe src="http://widget.weibo.com/relationship/followbutton.php?language=zh_cn&width=136&height=24&uid=1647910344&style=2&;btn=light&dpc=1#" frameborder="0" marginwidth="0" marginheight="0"></iframe>
+				</span>
+				<span>
+					<iframe src="http://follow.v.t.qq.com/index.php?c=follow&a=quick&name=douguomeishi&style=5&t=1351091457260&f=1" frameborder="0" marginwidth="0" marginheight="0"></iframe>
+				</span>
+			</div>
+	</footer>
+	<div class="retoTop">
+		<div class="fabu"><a href=""></a></div>
+		<div class="retop"><a href=""></a></div>
+	</div>
+</body>
+</html>
+<script src="../../js/jquery/jquery-3.1.0.min.js"></script>
+<script src="../../js/swiper/swiper.min.js"></script>
+<script>
+	$('.panl .swiper-slide').each(function(i,ele){
+//		console.log(i+ele)
+		$(this).css('background-image','url(../../img/meidi/z'+(i+1)+'.jpg)');
+	});
+	
+	
+			//回到顶部操作
+			var $reto = $('.retoTop .retop');
+			// console.log($reto);
+			$reto.on("click", function(e) {
+			    e.preventDefault();
+			    //	当点击元素时，让页面的滚动距离为0.写两个是为了兼容
+			//document.documentElement.scrollTop = document.body.scrollTop = 0;
+			    $('html, body').animate({scrollTop:0},500);
+			//				$(window).scrollTop();
+			});
+			var isTopBtnShow = false;
+			window.onscroll = function() {
+			    var t = document.documentElement.scrollTop || document.body.scrollTop;
+			        //console.log(t);
+			    if (t >= 650 && !isTopBtnShow) {
+			        $('.retoTop').css("display", "block");
+			        isTopBtnShow = true;
+			    } else if(t<650 && isTopBtnShow) {
+			        $('.retoTop').fadeOut(200);
+			        isTopBtnShow = false;
+			    }
+			}
+</script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        centeredSlides: true,
+        autoplay: 2500,
+        autoplayDisableOnInteraction: false
+    });
+</script>

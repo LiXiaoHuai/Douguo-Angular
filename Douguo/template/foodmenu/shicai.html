@@ -1,0 +1,17 @@
+<div class="caicont">
+	<div class="caicontr" ng-repeat="fli in data">
+		<h2>{{ fli.type }}&nbsp;&nbsp;<a href="">(全部)</a></h2>
+		<div class="caili clear" ng-repeat="sli in fli.ty_list">
+			<h3>{{ sli.cont }}</h3>
+			<ul>
+				<li ng-repeat="xli in sli.list" ><a href="{{ xli.href }}" style="background-image: url({{ xli.img }});">{{ xli.name }}</a></li>
+			</ul>
+			<a href="" class="more" ng-if="sli.list[10]">更多</a>
+		</div>
+	</div>
+	<div class="cation">
+		<p>您当前的位置：<a href="#/home">豆果美食</a>>食材</p>
+		<a href="http://www.douguo.com/baike">查看所有食材&gt;&gt;</a>
+	</div>
+</div>
+

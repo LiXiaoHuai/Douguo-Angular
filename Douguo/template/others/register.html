@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="shortcut icon" type="image/x-icon" href="http://www.douguo.com/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="../../css/register.css"/>
+	<title>手机号注册-豆果美食</title>
+</head>
+<body>
+	<div class="page">
+		<div class="header">
+			<div class="logo">
+				<a href="../../index.html"></a>
+			</div>
+		</div>
+		<div class="main">
+			<div class="content">
+				<div class="header">
+					<span>新用户注册</span>
+					<span>已有账号，<a href="login.html">直接登录&gt;</a></span>
+				</div>
+				<div class="form">
+					<input id="mobile" type="text" placeholder="请输入手机号码"/>
+					<p>输入常用的手机号码，便于登录和找回密码</p>
+					<input id="name" type="text" placeholder="请输入昵称"/>
+					<p class="name_for">中英文均可，最多16个字哦~</p>
+					<input id="password1" type="text" placeholder="请输入密码"/>
+					<p class="password1_for">密码长度为6-22位，不能含有空格</p>
+					<input id="password2" type="text" placeholder="确认密码" />
+					<p class="password2_for">再一次输入密码</p>
+					<div class="test">
+						<input id="test_info" type="text" placeholder="输入验证码"/>
+						<button onclick="">获取验证码</button>
+					</div>
+					<span class="error">注册信息有误，请检查后重新提交</span>
+					<div class="douguo_info">
+						<input type="checkbox" />
+						<span>我已经阅读并且同意<a href="">豆果美食使用协议</a></span>
+					</div>
+					
+					<button id="zhuce">注册</button>
+					<p class="other">其他方式</p>
+					<div class="type">
+						<a href=""><i></i>腾讯登录</a>
+						<a href=""><i></i>微博登录</a>
+						<a href=""><i></i>邮箱注册</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+</body>
+</html>
+<script src="../js/jquery-3.1.0.min.js"></script>
+<script>
+	$('.form > input,#test_info').blur(function(){
+		$(this).css({
+			'box-shadow':'none',
+			'border-color':'rgb(222,222,221)'
+		});
+	});
+	
+	$('.form > input,#test_info').focus(function(){
+		$(this).css({
+			'border-color':'rgb(117,185,240)',
+			'box-shadow': '0 0 3px 1px rgb(117,185,240)'
+		});
+	});
+</script>

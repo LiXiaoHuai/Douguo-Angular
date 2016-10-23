@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html ng-app="starter">
+<head>
+	<meta charset="utf-8" />
+	<title>豆果美食_开启美味的生活</title>
+	<link rel="shortcut icon" type="image/x-icon" href="http://www.douguo.com/favicon.ico" />
+	<link rel="stylesheet" href="css/iconfont/iconfont.css" />
+	<link rel="stylesheet" href="css/index.css" />
+	<!--<link rel="stylesheet" href="css/paihang.css" />-->
+</head>
+<body>
+	<div id="homepage" ng-controller="mainpage">
+		<header>
+			<div class="hd_content">
+				<a class="logo"></a>
+				<div class="hd_right">
+					<ul>
+						<li><a href="template/others/login.html">登录</a></li>
+						<li><a href="template/others/register.html">注册</a></li>
+						<li><a href="">QQ登录</a></li>
+						<li><a href="">新浪微博</a></li>
+					</ul>				
+				</div>
+			</div>		
+		</header>
+		<nav>
+			<div class="nav_content">
+				<div class="nav_left">
+					<ul>
+						<li><a href="#/home">首页</a></li>
+						<li>
+							<a href="#/foodmenu/jingxuan">菜谱<i class="iconfont">&#xe629;</i></a>
+							<div class="caipu">
+								<header >
+									<a href="" ng-repeat="a in data.alltype ">{{ a }}</a>
+								</header>
+								<h1><a href="">食材</a></h1>
+								<div class="shicai" >
+									<ul>
+										<li ng-repeat="x in data.shicai"><a href="">{{ x }}</a></li>
+									</ul>
+								</div>
+								<h1><a href="">分类</a></h1>
+								<div ng-repeat="sl in data.fenlei">
+									<div class="fenlei">
+										<span>{{ sl.type }}</span>
+										<ul>
+											<li ng-repeat="it in sl.list"><a href="">{{ it }}</a></li>
+										</ul>
+									</div>
+								</div>
+								<h1 class="findall"><a href="">查看全部分类</a></h1>
+							</div>
+						</li>
+						<li><a href="#/delicious/discover">写食派</a></li>
+						<li><a href="#/goodshoping">购好货<span></span></a></li>
+						<li><a href="#/theme">主题站</a></li>
+						<li><a href="#/activity">活动</a></li>
+					</ul>
+				</div>
+				<div class="nav_right">
+					<div class="fabu">
+						<div>
+							<span style="font-size: 18px;">+</span> 发布
+							<ul>
+								<li><a href="">发布菜单</a></li>
+								<li><a href="">创建菜单</a></li>
+								<li><a href="">上传美食日记</a></li>
+							</ul>
+						</div>						
+					</div>
+					<div class="search">
+						<input type="text" placeholder="搜索菜谱、菜单、食材、用户"/>
+						<a class="iconfont" href="" >&#xe618;</a>
+					</div>				
+				</div>
+			</div>			
+		</nav>
+		
+		<!--渲染视图-->
+		<div class="main" ui-view>	</div>
+		
+		<footer>
+			<div class="about">
+				<a href="">关于豆果</a>
+				<a href="">· 在豆果工作 </a>
+				<a href="">· 意见反馈</a>
+				<a href="">· 友情链接</a>
+				<a href="">· 菜谱大全</a>
+				<a href="">· 品牌馆</a>
+				<a href="">· 商家入驻</a>
+			</div>
+			<p>©2009-2016 北京豆果信息技术有限公司 京ICP证111032号 京公网安备11010102001133号 京网文[2014]0774-174号 食品流通许可证SP1101061510252413</p>
+			<div class="ifm">
+				<span>
+					<iframe src="http://widget.weibo.com/relationship/followbutton.php?language=zh_cn&width=136&height=24&uid=1647910344&style=2&;btn=light&dpc=1#" frameborder="0" marginwidth="0" marginheight="0"></iframe>
+				</span>
+				<span>
+					<iframe src="http://follow.v.t.qq.com/index.php?c=follow&a=quick&name=douguomeishi&style=5&t=1351091457260&f=1" frameborder="0" marginwidth="0" marginheight="0"></iframe>
+				</span>
+			</div>
+		</footer>
+	</div>	
+</body>
+</html>
+<script src="js/jquery/jquery-3.1.0.min.js"></script>
+<script src="js/angularjs/angular.min.js"></script>
+<script src="js/angularjs/angular-ui-router.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/controllers/controller.js"></script>
+<script src="js/services/services.js"></script>
+<script src="js/filters/filter.js"></script>
+<script src="js/directives/directives.js"></script>
+<script src="js/angularjs/angular-animate.min.js"></script>
+

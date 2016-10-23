@@ -1,0 +1,10 @@
+<div  class="cood "  ng-repeat="cdli in data" food-fenlei>
+	<h3>{{ cdli.cd_name }}</h3>
+	<ul>
+		<li ng-repeat="x in cdli.list"><a href="{{ x.href }}">{{ x.name }}</a></li>
+		<div style="clear: both;"></div>
+	</ul>
+	<div class="toggle">
+		<span><i class="iconfont">&#xe628;</i><a href="" class="updown">展开更多</a></span>
+	</div>
+</div>

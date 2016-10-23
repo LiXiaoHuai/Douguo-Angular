@@ -1,0 +1,19 @@
+<div class="caidan">
+	<h3 class="head"><a  href="">最新</a><a href="" class="active">最热</a></h3>
+	<div class="caicont">
+		<ul class="outul">
+			<li ng-repeat="cli in data">
+				<h3 class="lihead"><a href="">{{ cli.c_name }} <span>{{ cli.c_num }}</span></a></h3>
+				<a href="" class="limid">
+					<ul class="inul">
+						<li  ng-repeat="mimg in cli.pics" style="background-image: url({{ mimg.m_img }});">
+							<!--<div class="img" style="background-image: url({{ mimg }});"></div>-->
+						</li>
+					</ul>
+					<div class="inulbox"></div>
+				</a>
+				<a href="" class="libom">收藏  &nbsp;<span>({{ cli.s_num }})</span></a>
+			</li>
+		</ul>
+	</div>
+</div>

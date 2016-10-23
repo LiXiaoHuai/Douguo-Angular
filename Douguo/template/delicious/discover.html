@@ -1,0 +1,43 @@
+	<div class="good_restaurant">
+		<h3>发现身边最好吃的餐厅<a href="">下载写食派，随时随地发美食</a></h3>
+		<ul>
+			<li ng-repeat="des in data.restaurant" >
+				<a href="" style="background-image: url({{ des.food_pic }});" >
+					<div>
+						<p class="food_name">{{ des.food_name }}</p>
+						<p class="address"><i class="iconfont">&#xe62c;</i>{{ des.address }}</p>
+						<p class="info"><span><i class="iconfont">&#xe631;</i>{{ des.thumbs_up }}</span><span>by {{ des.username }}</span></p>
+					</div>
+				</a>
+			</li>
+		</ul>
+	</div>
+	<div class="recommend" >
+		<h3>推荐餐厅 &nbsp;<a href="">(更多)</a></h3>
+		<ul>
+			<li ng-repeat="re_li in data.recommend">
+				<h3><a href="">{{ re_li.name }}</a></h3>
+				<p class="re_reason"><span>推荐理由：</span>{{ re_li.reason }}</p>
+				<p class="re_adrs"><span>地址：</span>{{ re_li.address }}</p>
+				<p class="re_money"><span>人均：</span>{{ re_li.money }}</p>
+				<ul>
+					<li ng-repeat="pic_li in re_li.pic">
+						<a href="">
+							<img src="{{ pic_li.pic_url }}" title="{{ pic_li.pic_name }}" />
+							<div title="{{ pic_li.pic_name }}"><p>{{ pic_li.pic_name }}</p></div>
+						</a>
+					</li>
+					<div style="clear:both;"></div>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="hot_restaurant">
+		<h3>本周热门餐厅</h3>
+		<ul>
+			<li ng-repeat="hot_li in data.hot">
+				<a href=""><img src="{{ hot_li.pic_url }}" alt="{{ hot_li.name }}" /></a>
+				<p><a href="">{{ hot_li.name }}</a><span>{{ hot_li.thumbs_up }}赞</span></p>
+			</li>
+		</ul>
+	</div>

@@ -1,0 +1,25 @@
+<div class="category">
+	<div ng-repeat="x in data.menu">
+		<h3>{{ x.title }}</h3>
+		<ul >
+			<li ng-repeat="li in x.type"><a href="">{{ li }}</a></li>
+		</ul>
+	</div>
+</div>
+<div class="foodworks">
+	<div class="work_head">
+		<h3>吃饭不积极，思想有问题</h3>
+		<a href="">查看最新菜谱&gt;&gt;</a>
+	</div>
+	<div class="work_content">
+		<ul>
+			<li ng-repeat="w in data.works">
+				<a class="work_img" href="" style="background-image: url('img/work_content/{{ w.big_img }}')" ></a>
+				<h3><a href="">{{ w.work_name }}</a></h3>
+				<p>{{ w.browse_num+'浏览 · '+w.collect_num+'收藏 · '+w.learn_num+'已学做'  }} <a href="">{{ w.author_name }}</a></p>
+				<a href="" class="head_img" style="background-image: url('img/work_content/{{ w.head_img }}')"></a>
+				<span ng-if="w.sole > 0">独家</span>
+			</li>
+		</ul>
+	</div>
+</div>

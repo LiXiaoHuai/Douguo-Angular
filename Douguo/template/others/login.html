@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<link rel="shortcut icon" type="image/x-icon" href="http://www.douguo.com/favicon.ico">
+	<link rel="stylesheet" type="text/css" href="../../css/login.css"/>
+	<title>登录-豆果美食</title>
+</head>
+<body>
+	<div class="page">
+		<div class="header">
+			<div class="logo">
+				<a href="../../index.html"></a>
+			</div>
+		</div>
+		<div class="main">
+			<div class="content">
+				<div class="pic"></div>
+				<div class="login">
+					<h3>登录       <a href="register.html">去注册&gt;</a></h3>
+					<input id="username" type="text" required="required" placeholder="请输入手机号码、邮箱" href="#input1"/>
+					<input id="password" type="password" required="required" placeholder="请输入密码"/>
+					<div class="forget">
+						<a href="">忘记密码&gt;</a>
+						<span class="info"></span>
+					</div>
+					 <button>登录</button>
+					<p>使用社交账号登录豆果美食</p>
+					<div class="login_type">
+						<a href=""><i></i>腾讯账号</a>
+						<a href=""><i></i>新浪微博</a>
+					</div>
+				</div>
+				
+			</div>	
+		</div>	
+		<footer>
+			<div class="about">
+				<a href="">关于豆果</a>
+				<a href="">· 在豆果工作 </a>
+				<a href="">· 意见反馈</a>
+				<a href="">· 友情链接</a>
+				<a href="">· 菜谱大全</a>
+				<a href="">· 品牌馆</a>
+				<a href="">· 商家入驻</a>
+			</div>
+			<p>©2009-2016 北京豆果信息技术有限公司 京ICP证111032号 京公网安备11010102001133号 京网文[2014]0774-174号 食品流通许可证SP1101061510252413</p>
+		</footer>
+	</div>	
+</body>
+</html>
+<script src="../js/jquery-3.1.0.min.js"></script>
+<script>
+	$('#username').blur(function(){
+		var txt = $(this).val();
+		var re1 = /^(13[0-9]|14[0-9]|15[0-9]|18[0-9])\d{8}$/i;
+		var re2 = /^\w+([-+.]\w+)*@\w+([-+.]\w+)+$/ig;
+		var s1 = re1.test(txt);
+		var s2 = re2.test(txt);
+		console.log(txt.length);
+		if(!s1&&!s2){
+			$('.info').text('邮箱或手机号码错误');
+		}else{
+			$('.info').text(' ');
+		}
+		$(this).css({
+			'box-shadow':'none',
+			'border-color':'rgb(222,222,221)'
+		});
+	});
+	$('#password').blur(function(){
+		var txt = $(this).val();
+		console.log(txt.length);
+		if(txt.length < 6){
+			$('.info').text('密码不能小于6位');
+		}else{
+			$('.info').text(' ');
+		}
+		$(this).css({
+			'box-shadow':'none',
+			'border-color':'rgb(222,222,221)'
+		});
+	});
+	$('#username').focus(function(){
+		$(this).css({
+			'border-color':'rgb(117,185,240)',
+			'box-shadow': '0 0 3px 1px rgb(117,185,240)'
+		});
+	});
+	$('#password').focus(function(){
+		$(this).css({
+			'border-color':'rgb(117,185,240)',
+			'box-shadow': '0 0 3px 1px rgb(117,185,240)'
+		});
+	});
+</script>

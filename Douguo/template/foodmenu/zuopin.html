@@ -1,0 +1,26 @@
+<div class="zuopin">
+	<h3>
+		<ul>
+			<li><a href="">最新上传</a></li>
+			<li><a class="active" href="">7天最佳</a></li>
+			<li><a href="">30天最佳</a></li>
+		</ul>
+	</h3>
+	<ul class="list">
+		<li ng-repeat="zli in data">
+			<div class="ztp">
+				<a href="" class="bimg" style="background-image: url({{ zli.zp_img }});"></a>
+				<a href="" class="like">喜欢</a>
+			</div>
+			<div class="zmd">
+				<a href="" class="himg" style="background-image: url({{ zli.head_img }});"></a>
+				<a href="" class="uname">{{ zli.name }}</a>
+			</div>
+			<p class="zbo">			
+					<a href="">{{ zli.like }}喜欢</a>
+					<a href="">{{ zli.reczupingl }}评论</a>
+					<span>{{ zli.byname}}天前</span>
+			</p>
+		</li>
+	</ul>
+</div>
