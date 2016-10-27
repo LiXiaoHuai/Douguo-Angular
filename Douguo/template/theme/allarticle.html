@@ -1,0 +1,29 @@
+<div class="allarticle">
+	<div class="cont_left">
+		<h3>全部文章<a href="">订阅RSS</a></h3>
+		<ul>
+			<li class="atcitem clear" ng-repeat="atc in data.scatc">
+				<a href="" class="atctitle" style="background-image: url({{ atc.scimg }});"></a>
+				<div class="atccont">
+					<h4><a href="">{{ atc.sctitle }}</a></h4>
+					<div class="atcinfo"><a href="">{{ atc.scname }}</a>&nbsp;发表于:<span>{{ atc.sctime }}</span></div>
+					<p>{{ atc.jiep }}（<a href="">查看全文</a>）</p>
+					<div class="atcmark">来自：<a href="">{{ atc.jimp }}</a>&nbsp;主题站&nbsp;<span>{{ atc.scnum }}</span></div>
+				</div>
+			</li>
+			<div class="fy">
+				<!--分页处理-->
+			</div>
+		</ul>
+	</div>
+	<div class="cont_right">
+		<h3>主题站</h3>
+		<ul>
+			<li class="clear" ng-repeat="pv in data.pvli">
+				<a href="" class="thimg" style="background-image: url({{ pv.pvimg }});"></a>
+				<a href="" class="thname">{{ pv.pvtle }}</a>
+				<p>{{ pv.pvinfo }}</p>
+			</li>
+		</ul>
+	</div>
+</div>

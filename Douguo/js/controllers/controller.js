@@ -7,6 +7,13 @@ angular.module('starter.controller',['starter.services'])
 				});
 			});
 			
+			$('.search input').blur(function(){
+				$('.searchmore').css('display','none');
+			});
+			$('.search input').focus(function(){
+				$('.searchmore').css('display','block');
+			});
+			
 			//监听，一旦接收到broadcast，就去取数据
 			$scope.data = {};
     		$scope.$on('aboutIndex',function(){
@@ -14,7 +21,7 @@ angular.module('starter.controller',['starter.services'])
 //			  	console.log($scope.data);
     		});  
 			//发送请求
-			indexFactory.getIndex();			
+			indexFactory.getIndex();
 	})
 	.controller('homeController',function(){
 			$('.nav_left >ul >li:nth-of-type(1) a').addClass('active');
@@ -45,11 +52,11 @@ angular.module('starter.controller',['starter.services'])
 				y = -r * 36;
 				$(ele).css('background-position',x+'px '+y+'px');
 			});
+			
+			
 	})
 	
-	
-	
-	
+		
 	.controller('foodmenuController',function(){
 			/*初始化*/
 //			$("link[item]").attr("href","css/foodmenu.css");
@@ -88,61 +95,58 @@ angular.module('starter.controller',['starter.services'])
 			    }
 			}
 	})
-	.controller('jingxuanController',function($scope,jingxuanFactory){
-			$scope.data = {};
-    		$scope.$on('aboutJingxuan',function(){
-    			$scope.data = jingxuanFactory.getJingxuandata();
-//			  	console.log($scope.data);
-    		});  
-			jingxuanFactory.getJingxuan();			
-	})
-	.controller('fenleiController',function($scope,fenleiFactory){
-			$scope.data = {};
-    		$scope.$on('aboutFenlei',function(){
-    			$scope.data = fenleiFactory.getFenleidata();
-//			  	console.log($scope.data);
-    		});  
-			fenleiFactory.getFenlei();	
-	})
-	.controller('shicaiController',function($scope,shicaiFactory){
-			$scope.data = {};
-    		$scope.$on('aboutShicai',function(){
-    			$scope.data = shicaiFactory.getShicaidata();
-//			  	console.log($scope.data);
-    		});  
-			shicaiFactory.getShicai();			
-	})
-	.controller('zuopinController',function($scope,zuopinFactory){
-			$scope.data = {};
-    		$scope.$on('aboutZuopin',function(){
-    			$scope.data = zuopinFactory.getZuopindata();
-//			  	console.log($scope.data);
-    		});  
-			zuopinFactory.getZuopin();		
-	})
-	.controller('caidanController',function($scope,caidanFactory){
-			$scope.data = {};
-    		$scope.$on('aboutCaidan',function(){
-    			$scope.data = caidanFactory.getCaidandata();
-//			  	console.log($scope.data);
-    		});  
-			caidanFactory.getCaidan();			
-	})
-	.controller('paihangController',function($scope,paihangFactory){
-			$scope.data = {};
-    		$scope.$on('aboutPaihang',function(){
-    			$scope.data = paihangFactory.getPaihangdata();
-//			  	console.log($scope.data);
-    		});  
-			paihangFactory.getPaihang();			
-	})
+			.controller('jingxuanController',function($scope,jingxuanFactory){
+					$scope.data = {};
+		    		$scope.$on('aboutJingxuan',function(){
+		    			$scope.data = jingxuanFactory.getJingxuandata();
+		//			  	console.log($scope.data);
+		    		});  
+					jingxuanFactory.getJingxuan();			
+			})
+			.controller('fenleiController',function($scope,fenleiFactory){
+					$scope.data = {};
+		    		$scope.$on('aboutFenlei',function(){
+		    			$scope.data = fenleiFactory.getFenleidata();
+		//			  	console.log($scope.data);
+		    		});  
+					fenleiFactory.getFenlei();	
+			})
+			.controller('shicaiController',function($scope,shicaiFactory){
+					$scope.data = {};
+		    		$scope.$on('aboutShicai',function(){
+		    			$scope.data = shicaiFactory.getShicaidata();
+		//			  	console.log($scope.data);
+		    		});  
+					shicaiFactory.getShicai();			
+			})
+			.controller('zuopinController',function($scope,zuopinFactory){
+					$scope.data = {};
+		    		$scope.$on('aboutZuopin',function(){
+		    			$scope.data = zuopinFactory.getZuopindata();
+		//			  	console.log($scope.data);
+		    		});  
+					zuopinFactory.getZuopin();		
+			})
+			.controller('caidanController',function($scope,caidanFactory){
+					$scope.data = {};
+		    		$scope.$on('aboutCaidan',function(){
+		    			$scope.data = caidanFactory.getCaidandata();
+		//			  	console.log($scope.data);
+		    		});  
+					caidanFactory.getCaidan();			
+			})
+			.controller('paihangController',function($scope,paihangFactory){
+					$scope.data = {};
+		    		$scope.$on('aboutPaihang',function(){
+		    			$scope.data = paihangFactory.getPaihangdata();
+		//			  	console.log($scope.data);
+		    		});  
+					paihangFactory.getPaihang();			
+			})
 	
 	
 	
-	
-	.controller('deliciousController',function($scope,deliciousFactory){
-			/*初始化*/
-//			$("link[item]").attr("href","css/delicious.css");
+	.controller('deliciousController',function($scope){
 			$('.nav_left >ul >li:nth-of-type(3) a').addClass('active');
 			$('.delicious_head li:nth-of-type(1) a').addClass('active');
 			$('.delicious_head li').each(function(ele,i){
@@ -154,6 +158,7 @@ angular.module('starter.controller',['starter.services'])
 						.removeClass('active');
 				});
 			});	
+			
 			/*下载块隐藏*/
 			$('.xiazai').find('span').click(function(event){
 				event.stopPropagation();
@@ -181,68 +186,115 @@ angular.module('starter.controller',['starter.services'])
 			        $reto.fadeOut(200);
 			        isTopBtnShow = false;
 			    }
-			}
-			
-			
-			
-			$scope.data = {};
-    		$scope.$on('aboutDelicious',function(){
-    			$scope.data = deliciousFactory.getDeliciousdata();
-//			  	console.log($scope.data);
-    		});  
-			deliciousFactory.getDelicious();		
+			}	
 	})
-	.controller('discoverController',function($scope,deliciousFactory){
-			$scope.data = {};
-    		$scope.$on('aboutDelicious',function(){
-    			$scope.data = deliciousFactory.getDeliciousdata();
-//			  	console.log($scope.data);
-    		});  
-			deliciousFactory.getDelicious();		
-	})
-	.controller('diaryController',function($scope,deliciousFactory){
-			$scope.data = {};
-    		$scope.$on('aboutDelicious',function(){
-    			$scope.data = deliciousFactory.getDeliciousdata();
-//			  	console.log($scope.data);
-    		});  
-			deliciousFactory.getDelicious();		
-	})
-	.controller('hotelController',function($scope,deliciousFactory){
-			$scope.data = {};
-    		$scope.$on('aboutDelicious',function(){
-    			$scope.data = deliciousFactory.getDeliciousdata();
-//			  	console.log($scope.data);
-    		});  
-			deliciousFactory.getDelicious();		
-	})
-	
-	
-	
-	
+			.controller('discoverController',function($scope,discoverFactory){
+					$scope.data = {};
+		    		$scope.$on('aboutDiscover',function(){
+		    			$scope.data = discoverFactory.getDiscoverdata();
+		//			  	console.log($scope.data);
+		    		});  
+					discoverFactory.getDiscover();		
+			})
+			.controller('diaryController',function($scope,diaryFactory){
+					$scope.data = {};
+		    		$scope.$on('aboutDiary',function(){
+		    			$scope.data = diaryFactory.getDiarydata();
+		//			  	console.log($scope.data);
+		    		});  
+					diaryFactory.getDiary();	
+			})
+			.controller('hotelController',function($scope){
+						
+			})
 	
 	
 	
 	
 	.controller('goodshopingController',function($scope,goodshopingFactory){
-			/*初始化*/
-//			$("link[item]").attr("href","css/goodshoping.css");
 			$('.nav_left >ul >li:nth-of-type(4) a').addClass('active');
 			
 			$scope.data = {};
-
     		$scope.$on('aboutGoodshoping',function(){
     			$scope.data = goodshopingFactory.getGoodshopingdata();
     		});  
 			goodshopingFactory.getGoodshoping();	
 	})
-	.controller('themecontroller',function(){
-			/*初始化*/
-//			$("link[item]").attr("href","css/foodmenu.css");
+	
+	
+	
+	
+	.controller('themeController',function(){
 			$('.nav_left >ul >li:nth-of-type(5) a').addClass('active');
+			$('.themehead li:nth-of-type(2) a').addClass('active');
+			$('.themehead li').each(function(ele,i){
+				$(this).children('a').click(function(){
+					$(this).addClass('active')
+						.parent()
+						.siblings()
+						.children('a')
+						.removeClass('active');
+				});
+			});	
 	})
-	.controller('activitycontroller',function(){
-			/*初始化*/
-//			$("link[item]").attr("href","css/foodmenu.css");
+			.controller('allarticleController',function($scope,allarticleFactory){
+					$scope.data = {};
+		    		$scope.$on('aboutAllarticle',function(){
+		    			$scope.data = allarticleFactory.getAllarticledata();
+		    		});  
+					allarticleFactory.getAllarticle();	
+			})
+			.controller('allthemeController',function($scope){
+						
+			})
+	
+	
+	.controller('activityController',function(){
 			$('.nav_left >ul >li:nth-of-type(6) a').addClass('active');
-	});
+			$('.act_right >ul li:nth-of-type(1) a').addClass('active');
+			$('.act_right li').each(function(ele,i){
+				$(this).children('a').click(function(){
+					$(this).addClass('active')
+						.parent()
+						.siblings()
+						.children('a')
+						.removeClass('active');
+				});
+			});	
+	})
+			.controller('allactiveController',function($scope,allactiveFactory){
+					$scope.data = {};
+		    		$scope.$on('aboutAllactive',function(){
+		    			$scope.data = allactiveFactory.getAllactivedata();
+		    		});  
+					allactiveFactory.getAllactive();	
+			})
+			.controller('mstygController',function($scope,mstygFactory){
+					$scope.data = {};
+		    		$scope.$on('aboutMstyg',function(){
+		    			$scope.data = mstygFactory.getMstygdata();
+		    		});  
+					mstygFactory.getMstyg();
+			})
+			.controller('msktController',function($scope,msktFactory){
+					$scope.data = {};
+		    		$scope.$on('aboutMskt',function(){
+		    			$scope.data = msktFactory.getMsktdata();
+		    		});  
+					msktFactory.getMskt();
+			})
+			.controller('cpzjController',function($scope,cpzjFactory){
+					$scope.data = {};
+		    		$scope.$on('aboutCpzj',function(){
+		    			$scope.data = cpzjFactory.getCpzjdata();
+		    		});  
+					cpzjFactory.getCpzj();	
+			})
+			.controller('qthdController',function($scope,qthdFactory){
+					$scope.data = {};
+		    		$scope.$on('aboutQthd',function(){
+		    			$scope.data = qthdFactory.getQthddata();
+		    		});  
+					qthdFactory.getQthd();	
+			})
+	;
