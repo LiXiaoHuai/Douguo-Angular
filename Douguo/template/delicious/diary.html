@@ -1,3 +1,50 @@
-<div>
-	s
+<div class="diary_left">
+	<h3><a href=""></a><div><a href="" class="active">全部</a><a href="" >关注</a></div></h3>
+	<div class="dyli clear" ng-repeat="dyli in data.dyli">
+		<a href="" class="dyhead" style="background-image: url({{ dyli.headimg }});">{{ dyli.uname }}</a>
+		<div class="dycont">
+			<h4><a href="">{{ dyli.dyname }}</a><span>{{ dyli.dytime }}</span></h4>
+			<a href="" class="dyplace"><i class="iconfont">&#xe62d;</i> <span>{{ dyli.dyplace }}</span></a>
+			<a href="" class="dybmg" style="background-image: url({{ dyli.dyimg }});"></a>
+			<div class="dybom">
+				<a href="">分享<i class="iconfont">&#xe629;</i></a>
+				<a href="">评论{{ dyli.dypl }}</a>				
+				<a href=""><i class="iconfont">&#xe633;</i> 赞{{ dyli.dyzan }}</a>
+			</div>
+		</div>
+		<div class="line iconfont" data-font="&#xe62d;"></div>
+	</div>
+</div>
+<div class="diary_right">
+	<a href="" class="dr_xz">下载写食派，随时随地发美食</a>
+	<div class="hot_restaurant">
+		<h3>本周热门餐厅</h3>
+		<ul>
+			<li ng-repeat="hot in data.hot">
+				<a href=""><img src="{{ hot.pic_url }}" alt="{{ hot.name }}" /></a>
+				<p><a href="">{{ hot.name }}</a><span>{{ hot.thumbs_up }}赞</span></p>
+			</li>
+		</ul>
+	</div>
+	<div class="hotdiary">
+		<h3>24h热门日记</h3>
+		<ul class="clear">
+			<li class="clear" ng-repeat="pro in data.pro">
+				<a href="" class="hdimg" style="background-image: url({{ pro.proim }});"></a>
+				<a href="" class="hdinfo">{{ pro.promk }}</a><br />
+				<span class="hdname">by <a href="">{{ pro.uname }}</a></span>
+			</li>
+		</ul>
+	</div>
+	<div class="weekmaster">
+		<h3>本周记录达人Top10</h3>
+		<ul>
+			<li ng-repeat="dr in data.daren">
+				<a href="" class="wmimg" style="background-image: url({{ dr.uimg }});"></a>
+				<a href="" class="wmname">{{ dr.uname }}</a>
+				<p class="wminfo"><a href="">本周记录了{{ dr.ujilu }}条日记</a></p>
+				<a href="" class="gz">关注 +</a>
+			</li>
+		</ul>
+	</div>
 </div>

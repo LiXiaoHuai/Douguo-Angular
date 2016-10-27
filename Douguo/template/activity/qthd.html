@@ -1,0 +1,15 @@
+<div class="mstyg">
+	<h3>其他活动</h3>
+	<p>这里汇聚豆果美食与合作伙伴们主办的各类美食活动，定期派送美食图书，美食礼品、Q币、豆果纪念品等礼物，作为爱美食、爱豆果、爱学习、爱参与的您们，赶快来参与吧！ </p>
+</div>
+<div class="qbhd">
+	<ul class="clear">
+		<li ng-repeat="ab in data">
+			<a href="" class="actimg" style="background-image: url({{ ab.ab_img }});"><div class="end">已结束</div></a>
+			<div class="actinfo">
+				<h3>{{ ab.ab_title }}</h3>
+				<span>时间： {{ ab.ab_time }}</span><br />
+			</div>
+		</li>
+	</ul>
+</div>
