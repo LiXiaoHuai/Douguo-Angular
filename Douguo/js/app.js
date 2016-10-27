@@ -96,33 +96,7 @@ angular.module('starter',['ui.router','starter.controller','starter.filter','sta
                 	url:'/activity',
                 	templateUrl:'template/activity/activity.html',
                     controller:'activityController'
-                })
-                	.state('activity.allactive',{
-	                	url:'/allactive',
-	                	templateUrl:'template/activity/allactive.html',
-	                    controller:'allactiveController'
-	                })
-	                .state('activity.mstyg',{
-	                	url:'/mstyg',
-	                	templateUrl:'template/activity/mstyg.html',
-	                    controller:'mstygController'
-	                })
-	                .state('activity.mskt',{
-	                	url:'/mskt',
-	                	templateUrl:'template/activity/mskt.html',
-	                    controller:'msktController'
-	                })
-	                .state('activity.cpzj',{
-	                	url:'/cpzj',
-	                	templateUrl:'template/activity/cpzj.html',
-	                    controller:'cpzjController'
-	                })
-	                .state('activity.qthd',{
-	                	url:'/qthd',
-	                	templateUrl:'template/activity/qthd.html',
-	                    controller:'qthdController'
-	                })	
-                ;
+                });
                 
                 /*重定向状态如果找不到路由  则重定向到首页*/
                 $urlRouterProvider.otherwise('/home');

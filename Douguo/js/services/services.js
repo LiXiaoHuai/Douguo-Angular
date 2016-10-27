@@ -132,40 +132,21 @@ angular.module('starter.services',[])
 			}
 		}
 	})
-	.factory('discoverFactory',function($http,$rootScope){
+	.factory('deliciousFactory',function($http,$rootScope){
 		var data = {};
 		return {
-			getDiscover:function(){
+			getDelicious:function(){
 				$http({
-					url:'json/discover.json',
+					url:'json/delicious.json',
 					method:'GET'
 				})
 				.success(function(res){
 //					console.log(res);
 					data = res;
-					$rootScope.$broadcast('aboutDiscover');
+					$rootScope.$broadcast('aboutDelicious');
 				});
 			},
-			getDiscoverdata:function(){
-				return data;
-			}
-		}
-	})
-	.factory('diaryFactory',function($http,$rootScope){
-		var data = {};
-		return {
-			getDiary:function(){
-				$http({
-					url:'json/diary.json',
-					method:'GET'
-				})
-				.success(function(res){
-//					console.log(res);
-					data = res;
-					$rootScope.$broadcast('aboutDiary');
-				});
-			},
-			getDiarydata:function(){
+			getDeliciousdata:function(){
 				return data;
 			}
 		}
@@ -188,120 +169,5 @@ angular.module('starter.services',[])
 				return data;
 			}
 		}
-	})
-	.factory('allarticleFactory',function($http,$rootScope){
-		var data = {};
-		return {
-			getAllarticle:function(){
-				$http({
-					url:'json/allarticle.json',
-					method:'GET'
-				})
-				.success(function(res){
-//					console.log(res);
-					data = res;
-					$rootScope.$broadcast('aboutAllarticle');
-				});
-			},
-			getAllarticledata:function(){
-				return data;
-			}
-		}
-	})
-	.factory('allactiveFactory',function($http,$rootScope){
-		var data = {};
-		return {
-			getAllactive:function(){
-				$http({
-					url:'json/allactive.json',
-					method:'GET'
-				})
-				.success(function(res){
-//					console.log(res);
-					data = res;
-					$rootScope.$broadcast('aboutAllactive');
-				});
-			},
-			getAllactivedata:function(){
-				return data;
-			}
-		}
-	})
-	.factory('mstygFactory',function($http,$rootScope){
-		var data = {};
-		return {
-			getMstyg:function(){
-				$http({
-					url:'json/mstyg.json',
-					method:'GET'
-				})
-				.success(function(res){
-//					console.log(res);
-					data = res;
-					$rootScope.$broadcast('aboutMstyg');
-				});
-			},
-			getMstygdata:function(){
-				return data;
-			}
-		}
-	})
-	.factory('msktFactory',function($http,$rootScope){
-		var data = {};
-		return {
-			getMskt:function(){
-				$http({
-					url:'json/mskt.json',
-					method:'GET'
-				})
-				.success(function(res){
-//					console.log(res);
-					data = res;
-					$rootScope.$broadcast('aboutMskt');
-				});
-			},
-			getMsktdata:function(){
-				return data;
-			}
-		}
-	})
-	.factory('cpzjFactory',function($http,$rootScope){
-		var data = {};
-		return {
-			getCpzj:function(){
-				$http({
-					url:'json/cpzj.json',
-					method:'GET'
-				})
-				.success(function(res){
-//					console.log(res);
-					data = res;
-					$rootScope.$broadcast('aboutCpzj');
-				});
-			},
-			getCpzjdata:function(){
-				return data;
-			}
-		}
-	})
-	.factory('qthdFactory',function($http,$rootScope){
-		var data = {};
-		return {
-			getQthd:function(){
-				$http({
-					url:'json/qthd.json',
-					method:'GET'
-				})
-				.success(function(res){
-//					console.log(res);
-					data = res;
-					$rootScope.$broadcast('aboutQthd');
-				});
-			},
-			getQthddata:function(){
-				return data;
-			}
-		}
-	})
-	;
+	});
 	
