@@ -204,8 +204,14 @@ angular.module('starter.controller',['starter.services'])
 		    		});  
 					diaryFactory.getDiary();	
 			})
-			.controller('hotelController',function($scope){
-						
+			.controller('hotelController',function($scope,hotelFactory){
+					$('.htcont .htleft h3 li:nth-of-type(1) a').addClass('active');
+					$scope.data = {};
+		    		$scope.$on('aboutHotel',function(){
+		    			$scope.data = hotelFactory.getHoteldata();
+		//			  	console.log($scope.data);
+		    		});  
+					hotelFactory.getHotel();		
 			})
 	
 	

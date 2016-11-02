@@ -1,3 +1,46 @@
-<div >
-	
+<div class="hotel">
+	<div class="htnav clear">
+		<div class="hnli clear" ng-repeat="ths in data.thead">
+			<span>{{ ths.type }}：</span>
+			<ul class="clear">
+				<li ng-repeat="tli in ths.types track by $index"><a href="">{{ tli }}</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="htcont clear">
+		<div class="htleft recommend">
+			<h3 class="clear">
+				<ul>
+					<li><a href="">默认</a></li>
+					<li><a href="">日记最多</a></li>
+					<li><a href="">最便宜</a></li>
+					<li><a href="">推荐餐厅</a></li>
+				</ul>
+			</h3>
+			<ul>
+				<li ng-repeat="ct in data.tcont">
+					<h3><a href="">{{ ct.ctname }}</a></h3>
+					<p class="re_adrs"><span>地址：</span>{{ ct.ctaddress }}</p>
+					<p class="re_money"><span>人均：</span>￥{{ ct.ctmoney }}</p>
+					<ul class="clear">
+						<li ng-repeat="ci in ct.ctary">
+							<a href="">
+								<img src="{{ ci.img }}" title="{{ ci.tle }}"/>
+								<div title="{{ ci.tle }}"><p>{{ ci.tle }}</p></div>
+							</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="htright hot_restaurant">
+			<h3>本周热门餐厅</h3>
+			<ul>
+				<li ng-repeat="hot_li in data.hot">
+					<a href=""><img src="{{ hot_li.pic_url }}" alt="{{ hot_li.name }}" /></a>
+					<p><a href="">{{ hot_li.name }}</a><span>{{ hot_li.thumbs_up }}赞</span></p>
+				</li>
+			</ul>
+		</div>
+	</div>
 </div>

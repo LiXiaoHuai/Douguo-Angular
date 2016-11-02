@@ -1,0 +1,64 @@
+.hotel{
+	padding-top: 20px;
+}
+.hotel .htnav{
+	padding: 8px 15px;
+	background-color: rgb(244,240,236);
+}
+.htnav .hnli{
+	padding: 8px 0;
+	border-bottom: 1px dotted rgb(220,220,220);	
+}
+.htnav .hnli:last-child{
+	border-bottom:none;
+}
+.htnav .hnli > ul{
+	float: left;
+	width: 866px;
+}
+.htnav .hnli > span{
+	float: left;
+	width: 44px;
+	line-height: 30px;
+	font-size: 13px;
+}
+.hnli li{
+	float: left;
+	height: 30px;
+	line-height: 30px;
+	margin: 0 8px;
+	margin-bottom: 2px;
+	font-size: 12px;
+}
+.hnli li a{
+	padding: 5px 5px;
+	color: rgb(18,147,124);
+}
+.hnli li:nth-of-type(1) a.active{
+	background-color: rgb(18,147,124);
+	color: white;
+}
+.hnli li a:hover{
+	color: rgb(237,88,92);
+	text-decoration: underline;
+}
+.htcont .htleft{
+	float: left;
+	width: 602px;
+}
+.htcont .htleft h3 li{
+	float: left;
+	height: 50px;
+	line-height: 50px;
+	margin:0 10px;
+}
+.htcont .htleft h3 li a{
+	font-size: 12px;
+	float: left;
+	font-weight: normal;
+	color: rgb(18,147,124);
+}
+.htcont .htleft h3 li a.active{
+	color: black;
+	font-weight: bold;
+}

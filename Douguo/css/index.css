@@ -1330,6 +1330,7 @@ footer iframe{
 	margin-right: 25px;
 	background-color: rgb(244,240,236);
 	color: rgb(18,147,124);
+	cursor: pointer;
 }
 .caicontr .caili ul{
 	float: left;
@@ -1920,7 +1921,7 @@ footer iframe{
 .recommend > ul >li > p span{
 	color: rgb(153,153,153);
 }
-.recommend > ul >li > p:nth-of-type(3){
+.recommend > ul >li > .re_money{
 	color: rgb(255,0,0);
 }
 .recommend > ul >li li{

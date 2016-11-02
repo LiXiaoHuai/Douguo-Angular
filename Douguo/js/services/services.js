@@ -170,6 +170,25 @@ angular.module('starter.services',[])
 			}
 		}
 	})
+	.factory('hotelFactory',function($http,$rootScope){
+		var data = {};
+		return {
+			getHotel:function(){
+				$http({
+					url:'json/hotel.json',
+					method:'GET'
+				})
+				.success(function(res){
+//					console.log(res);
+					data = res;
+					$rootScope.$broadcast('aboutHotel');
+				});
+			},
+			getHoteldata:function(){
+				return data;
+			}
+		}
+	})
 	.factory('goodshopingFactory',function($http,$rootScope){
 		var data = {};
 		return {
